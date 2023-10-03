@@ -132,13 +132,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      <img src="static/images/main-figure.png" width="100%" height="550">
+      <h2>
+        <b>Figure 1:</b> The PrivQA benchmark consists of textual and visual question-answering tasks
+        designed to assess the ability of multi-modal language models to protect private information. The
+        model developers pre-define the Protected Groups of people (e.g., citizens of Italy) or types of informa-
+        tion (e.g., geolocation) to be protected. Models (e.g. GPT4, Flamingo) utilizes our
+        proposed Self-Moderation technique to selectively respond to questions i.e. abstaining from answering
+        questions in the Protected Group while responding to questions in the Control Group (e.g. non-Italian public figures).
       </h2>
     </div>
   </div>
@@ -162,43 +163,134 @@
 </section>
 <!-- End paper abstract -->
 
+<style>
+  .figure-caption {
+    font-size: 16px; /* You can adjust the font size as needed */
+  }
+</style>
+
+<!-- <div class="container is-max-desktop">
+  <div class="hero-body">
+    <img src="static/images/figure_tqa.png"/>
+    <h2 class="subtitle has-text-centered">
+    <h2>
+      <b>Figure 2:</b> The privacy-utility trade-off performance (protection score &
+      Response F1) on <b>textual</b> tasks from PrivQA for protected populations (<em>left</em>) and protected information (<em>right</em>). Baseline response model
+      indicates Response F1 without access control as a reference.
+    </h2>
+  </div>
+</div>
+<div class="container is-max-desktop">
+  <div class="hero-body" style="text-align: center;">
+    <img src="static/images/figure_vqa.png" style="display: block; margin: 0 auto;">
+    <h2 style="text-align: left;">
+      <b>Figure 3:</b> The privacy-utility trade-off on <b>visual</b> tasks for Citizenship and Geolocation tasks from PrivQA. As with textual tasks, the baseline response model indicates Response F1 without access control as a reference.
+    </h2>
+  </div>
+</div> -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+      <h2 class="title is-3">Benchmarking Models with PrivQA</h2>
+        </div>
+      </div>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/figure_tqa.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 2:</b> The privacy-utility trade-off performance (protection score &
+            Response F1) on <b>textual</b> tasks from PrivQA for protected populations (<em>left</em>) and protected information (<em>right</em>). Baseline response model
+            indicates Response F1 without access control as a reference.
+          </h2>
+        </div>
+        <div class="item" >
+          <!-- Your image here -->
+          <img src="static/images/figure_vqa.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 3:</b> The privacy-utility trade-off on <b>visual</b> tasks for Citizenship and Geolocation tasks from PrivQA. As with textual tasks, the baseline response model indicates Response F1 without access control as a reference.
+          </h2>
+        </div>
+        <div class="item" >
+          <!-- Your image here -->
+          <img src="static/images/self_moderation.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 4:</b> Protection score change over multiple self-authorization steps. GPT-series models benefit from additional steps of self-authorization.
+          </h2>
+          </h2>
+        </div>
+        <div class="item" >
+          <!-- Your image here -->
+          <img src="static/images/figure_entity_popular.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 5:</b> Entity popularity (<em>est. by Wikipedia monthly pageviews</em>) vs. sensitivity of the protected group, on average of protected populations.
+          </h2>
+        </div>
+        <div class="item" >
+          <!-- Your image here -->
+          <img src="static/images/figure_model_edit.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 6:</b> Model Editing (ROME) vs. Self-Moderation on protected population (<em>Citizenship: Italian</em>) across 5 to 100 edits with 5 random seeds.
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+      <h2 class="title is-3">Red Teaming: Circumventing Access Control Instructions in PrivQA</h2>
+        </div>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/redteam-1.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 7:</b> Visual prompt injection renders misinformation to the image.
+          </h2>
+        </div>
+        <div class="item" >
+          <!-- Your image here -->
+          <img src="static/images/multi_hop_bar_chart-1.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 8:</b> Attack Success of Multi-Hop Questions: Attack Success Rate (ASR) of multi-hop questions across protected information categories.
+          </h2>
+        </div>
+        <div class="item" >
+          <!-- Your image here -->
+          <img src="static/images/gpt-4v.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 9:</b> Redteaming examples using GPT-4V(ision) Sep 25th Edition. The model initially refused
+            to answer geolocation-related information to identify the building. However, after a follow-up prompt,
+            the model revealed the correct name of the building (Hangzhou International Conference Center) or a
+            specific location (Brighton Beach in Melbourne).            
+          </h2>
+          </h2>
+        </div>
+        <div class="item" >
+          <!-- Your image here -->
+          <img src="static/images/vqa_example-1.png" style="display: block; margin: 0 auto;">
+          <h2 class="subtitle" style="text-align: left;">
+            <b>Figure 10:</b> Visual QA examples of Self-Moderation(<tt>idefics-9b</tt>). <em>left</em>): the moderation process
+            correctly identifies the person and abstains from responding. (<em>right</em>): the moderation process incor-
+            rectly identifies the person as Yuko Ogura instead of Sayaka Akimoto. However, it makes the right
+            decision to abstain from responding as it classifies the person as a Japanese citizen (which is biased
+            and may raise concerns).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End image carousel -->
 
@@ -226,42 +318,6 @@
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
 
 
 <!-- Paper poster -->
@@ -283,9 +339,10 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{chen2023protection,
+      <pre><code>
+      @misc{chen2023protection,
         title={Can Language Models be Instructed to Protect Personal Information?}, 
-        author={Yang Chen and Ethan Mendes and Sauvik Das, and Wei Xu and Alan Ritter},
+        author={Yang Chen and Ethan Mendes and Sauvik Das and Wei Xu and Alan Ritter},
         year={2023},
         eprint={},
         archivePrefix={arXiv},
